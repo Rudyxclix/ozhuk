@@ -24,7 +24,7 @@ export async function connectDatabase(): Promise<boolean> {
     isConnected = true;
     console.log('✅ MongoDB connected successfully');
 
-    mongoose.connection.on('error', (err) => {
+    mongoose.connection.on('error', (err: Error) => {
       console.error('❌ MongoDB runtime connection error:', err.message);
       isConnected = false;
     });

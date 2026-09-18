@@ -1,4 +1,5 @@
 import { FastifyPluginAsync } from 'fastify';
+import { Readable } from 'node:stream';
 import { gridFSService } from '../services/gridfsService.js';
 
 const ALLOWED_MIME_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
@@ -17,7 +18,7 @@ export const uploadRoutes: FastifyPluginAsync = async (fastify) => {
 
       if (!ALLOWED_MIME_TYPES.includes(data.mimetype.toLowerCase())) {
         // Drain stream to avoid hanging client socket
-        data.file.resume();
+        (data.file as unknown as Readable).resume();
         return reply.code(400).send({
           error: 'Unsupported media type',
           message: `Only JPEG, PNG, and WebP images are supported. Received: ${data.mimetype}`,

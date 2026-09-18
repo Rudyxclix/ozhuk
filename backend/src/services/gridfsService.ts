@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { Readable } from 'stream';
+import { Readable } from 'node:stream';
 import { isDatabaseConnected } from '../config/database.js';
 
 const BUCKET_NAME = 'ozhukEvidence';
@@ -50,7 +50,7 @@ export const gridFSService = {
 
       fileStream
         .pipe(uploadStream)
-        .on('error', (err) => {
+        .on('error', (err: Error) => {
           reject(err);
         })
         .on('finish', () => {
