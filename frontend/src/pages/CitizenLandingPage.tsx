@@ -30,7 +30,7 @@ export const CitizenLandingPage: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
-      <section className="relative w-full bg-surface-container-low px-margin md:px-margin-desktop py-space-xl md:py-margin-desktop overflow-hidden border-b border-surface-container">
+      <section className="relative w-full bg-surface-container-low px-4 sm:px-margin md:px-margin-desktop py-space-xl md:py-margin-desktop overflow-hidden border-b border-surface-container">
         <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center relative z-10">
           <div className="lg:col-span-7 flex flex-col gap-space-lg">
             <div className="inline-flex items-center gap-space-xs self-start px-space-md py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm uppercase tracking-wider shadow-sm">
@@ -208,7 +208,7 @@ export const CitizenLandingPage: React.FC = () => {
       </section>
 
       {/* Metrics Strip */}
-      <section className="w-full bg-primary text-on-primary py-space-xl px-margin md:px-margin-desktop">
+      <section className="w-full bg-primary text-on-primary py-space-xl px-4 sm:px-margin md:px-margin-desktop">
         <div className="max-w-[1440px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-gutter">
           <div className="flex flex-col gap-0.5">
             <div className="flex items-baseline gap-1">

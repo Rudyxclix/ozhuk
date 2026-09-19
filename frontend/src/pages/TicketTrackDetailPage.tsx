@@ -39,7 +39,7 @@ export const TicketTrackDetailPage: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="max-w-[1024px] mx-auto px-margin py-space-xl flex flex-col items-center justify-center min-h-[400px] gap-space-sm">
+      <div className="max-w-[1024px] mx-auto px-4 sm:px-margin py-space-xl flex flex-col items-center justify-center min-h-[400px] gap-space-sm">
         <div className="w-10 h-10 rounded-full border-4 border-primary border-t-transparent animate-spin"></div>
         <p className="text-on-surface-variant font-label-md">Fetching ticket status from registry...</p>
       </div>
@@ -48,7 +48,7 @@ export const TicketTrackDetailPage: React.FC = () => {
 
   if (error || !report) {
     return (
-      <div className="max-w-[640px] mx-auto px-margin py-space-xl">
+      <div className="max-w-[640px] mx-auto px-4 sm:px-margin py-space-xl">
         <div className="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm border border-surface-container text-center flex flex-col items-center gap-space-sm">
           <div className="w-12 h-12 rounded-full bg-error-container text-error flex items-center justify-center">
             <span className="material-symbols-outlined text-[24px]">search_off</span>
@@ -79,7 +79,7 @@ export const TicketTrackDetailPage: React.FC = () => {
   const displayPhotoUrl = report.photoUrl;
 
   return (
-    <div className="max-w-[1024px] mx-auto px-margin md:px-gutter py-space-xl flex flex-col gap-space-lg">
+    <div className="max-w-[1024px] mx-auto px-4 sm:px-margin md:px-gutter py-space-lg sm:py-space-xl flex flex-col gap-space-lg">
       {/* Header Bar */}
       <div className="flex flex-wrap items-center justify-between gap-space-sm border-b border-surface-container pb-space-sm">
         <div className="flex items-center gap-space-xs font-label-md">
@@ -94,7 +94,7 @@ export const TicketTrackDetailPage: React.FC = () => {
           <span className="text-primary font-bold">#{report.ticketId}</span>
         </div>
 
-        <div className="flex items-center gap-space-sm">
+        <div className="flex items-center gap-space-sm flex-wrap">
           <SeverityBadge severity={report.severity} />
           <StatusBadge status={report.status} />
           <button

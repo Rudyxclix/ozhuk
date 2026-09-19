@@ -78,7 +78,7 @@ export const CitizenReportPage: React.FC<CitizenReportPageProps> = ({ onBackToHo
   };
 
   return (
-    <div className="max-w-[960px] mx-auto px-margin md:px-gutter py-space-xl">
+    <div className="max-w-[960px] mx-auto px-4 sm:px-margin md:px-gutter py-space-xl">
       {/* Workflow Breadcrumb Stepper */}
       <div className="mb-space-lg">
         <div className="flex items-center justify-between mb-space-xs">

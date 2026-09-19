@@ -1,4 +1,4 @@
-import { ReportItem, PublicReportItem, CreateReportDTO, UpdateReportStatusDTO, AssignReportDTO, WardRecord, OfficerRecord, SummaryStats, UploadPhotoResult } from '../types';
+import { ReportItem, PublicReportItem, CreateReportDTO, UpdateReportStatusDTO, AssignReportDTO, WardRecord, WardDetectionResult, OfficerRecord, SummaryStats, UploadPhotoResult } from '../types';
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api';
 
@@ -127,6 +127,15 @@ export const api = {
     if (!res.ok) throw new Error('Failed to fetch wards');
     const json = await res.json();
     return json.data;
+  },
+
+  async detectWard(lat: number, lng: number): Promise<WardDetectionResult> {
+    const res = await fetch(`${API_BASE}/wards/detect?lat=${encodeURIComponent(lat)}&lng=${encodeURIComponent(lng)}`);
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({ message: 'Failed to detect ward' }));
+      throw new Error(err.message || 'Failed to detect ward');
+    }
+    return await res.json();
   },
 
   async getOfficers(): Promise<OfficerRecord[]> {

@@ -56,8 +56,8 @@ export const AuthorityLoginPage: React.FC = () => {
   };
 
   return (
-    <div className="max-w-[480px] mx-auto px-margin py-space-xl">
-      <div className="rounded-xl bg-surface-container-lowest p-space-xl shadow-md border border-surface-container flex flex-col gap-space-md">
+    <div className="max-w-[480px] mx-auto px-4 sm:px-margin py-space-xl">
+      <div className="rounded-xl bg-surface-container-lowest p-6 sm:p-space-xl shadow-md border border-surface-container flex flex-col gap-space-md">
         {/* Prototype Notice Banner */}
         <div className="p-3 rounded-lg bg-secondary-container/40 border border-secondary-container text-on-surface-variant flex items-start gap-2 text-body-sm">
           <span className="material-symbols-outlined text-secondary text-[20px] flex-shrink-0 mt-0.5">

@@ -116,6 +116,18 @@ export interface WardRecord {
   wardName: string;
   division: string;
   leadOfficer: string;
+  localBody?: string;
+  district?: string;
+}
+
+export interface WardDetectionResult {
+  matched: boolean;
+  ward: WardRecord | null;
+  district: string | null;
+  localBody: string | null;
+  region?: string;
+  distanceKm?: number;
+  message: string;
 }
 
 export interface OfficerRecord {

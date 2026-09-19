@@ -120,7 +120,7 @@ export const PublicMapPage: React.FC = () => {
   return (
     <div className="flex flex-col w-full min-h-[calc(100vh-4rem)]">
       {/* Top Filter and Ward Bar */}
-      <div className="w-full bg-surface-container-low px-margin md:px-margin-desktop py-space-sm border-b border-surface-container">
+      <div className="w-full bg-surface-container-low px-4 sm:px-margin md:px-margin-desktop py-space-sm border-b border-surface-container">
         <div className="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-space-sm">
           {/* Status Filter Buttons */}
           <div className="flex items-center gap-space-xs overflow-x-auto py-1">
@@ -251,7 +251,7 @@ export const PublicMapPage: React.FC = () => {
       </div>
 
       {/* Public Map Summary Bar (Open vs Resolved Breakdown) */}
-      <div className="w-full bg-surface-container-lowest border-b border-surface-container px-margin md:px-margin-desktop py-2.5">
+      <div className="w-full bg-surface-container-lowest border-b border-surface-container px-4 sm:px-margin md:px-margin-desktop py-2.5">
         <div className="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-space-sm text-body-sm">
           <div className="flex items-center gap-4 flex-wrap">
             <span className="text-on-surface-variant font-label-md uppercase font-semibold">
@@ -281,11 +281,11 @@ export const PublicMapPage: React.FC = () => {
       </div>
 
       {/* Main Map & Incident Stream Grid */}
-      <div className="max-w-[1440px] w-full mx-auto px-margin md:px-margin-desktop py-space-md flex-1">
+      <div className="max-w-[1440px] w-full mx-auto px-4 sm:px-margin md:px-margin-desktop py-space-md flex-1">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
           {/* Left Column: Interactive Map Canvas */}
           <div className="lg:col-span-8 flex flex-col gap-space-md">
-            <div className="relative w-full h-[580px] rounded-xl overflow-hidden shadow-md bg-surface-container-lowest border border-surface-container">
+            <div className="relative w-full h-[400px] sm:h-[500px] md:h-[580px] rounded-xl overflow-hidden shadow-md bg-surface-container-lowest border border-surface-container">
               {/* Cartographic Texture Background */}
               <div
                 className="absolute inset-0 w-full h-full bg-cover bg-center"

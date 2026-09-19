@@ -14,10 +14,10 @@ import { AuthorityEscalatedPage } from './pages/AuthorityEscalatedPage';
 export function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen bg-surface">
+      <div className="flex flex-col min-h-screen bg-surface overflow-x-hidden w-full">
         <Navbar />
 
-        <main className="flex-1 w-full pt-16">
+        <main className="flex-1 w-full pt-16 overflow-x-hidden">
           <Routes>
             {/* Citizen Routes */}
             <Route path="/" element={<CitizenLandingPage />} />

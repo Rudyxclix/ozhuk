@@ -35,8 +35,8 @@ export const TrackSearchPage: React.FC = () => {
   };
 
   return (
-    <div className="max-w-[680px] mx-auto px-margin py-space-xl">
-      <div className="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm border border-surface-container flex flex-col gap-space-md">
+    <div className="max-w-[680px] mx-auto px-4 sm:px-margin py-space-lg sm:py-space-xl">
+      <div className="rounded-xl bg-surface-container-lowest p-4 sm:p-space-lg shadow-sm border border-surface-container flex flex-col gap-space-md">
         <div className="flex flex-col gap-1">
           <span className="font-label-sm uppercase tracking-wider text-secondary font-bold">
             Public Incident Status Lookup

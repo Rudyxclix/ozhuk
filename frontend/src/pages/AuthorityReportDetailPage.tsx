@@ -205,7 +205,7 @@ export const AuthorityReportDetailPage: React.FC = () => {
   const isEvidencePending = !report.photoUrl || report.photoUrl.startsWith('pending_upload:');
 
   return (
-    <div className="max-w-[1440px] mx-auto px-margin md:px-margin-desktop py-space-md flex flex-col gap-space-lg">
+    <div className="max-w-[1440px] mx-auto px-4 sm:px-margin md:px-margin-desktop py-space-md flex flex-col gap-space-lg">
       {/* Prototype Authority Notification Bar */}
       <div className="p-2.5 px-3 rounded-lg bg-surface-container-low border border-surface-container flex items-center justify-between text-body-sm text-on-surface-variant">
         <div className="flex items-center gap-2">

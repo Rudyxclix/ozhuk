@@ -194,7 +194,7 @@ export const AuthorityDashboardPage: React.FC = () => {
 
       {/* Main Dashboard Content */}
       <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
-        <header className="w-full bg-surface-container-lowest border-b border-surface-container px-space-lg py-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+        <header className="w-full bg-surface-container-lowest border-b border-surface-container px-4 sm:px-space-lg py-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
               <span className="text-secondary font-label-sm uppercase tracking-wider font-semibold">
@@ -228,7 +228,7 @@ export const AuthorityDashboardPage: React.FC = () => {
         </header>
 
         {/* 4 KPI Metric Cards */}
-        <div className="p-space-lg flex flex-col gap-gutter max-w-[1440px]">
+        <div className="p-4 sm:p-space-lg flex flex-col gap-gutter max-w-[1440px]">
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-gutter-sm">
             <div
               onClick={() => setStatusFilter('REPORTED')}
