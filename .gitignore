@@ -6,3 +6,4 @@ dist/
 .DS_Store
 *.log
 backend/test_phase5_gridfs.mjs
+stitch_ozhuk_civic_drainage_platform/
